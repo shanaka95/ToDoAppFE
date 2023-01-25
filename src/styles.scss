@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+// ADD FONTS ----------------------------------------------------------------
+
+// Add Popins Bold Font
+@font-face {
+    font-family: PoppinsSemiBold;
+    src: url(assets/font/Poppins-SemiBold.ttf) format("opentype");
+}
+
+// Add Popins Medium Font
+@font-face {
+    font-family: PoppinsMedium;
+    src: url(assets/font/Poppins-Medium.ttf) format("opentype");
+}
+
+// Add Popins Medium Font
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(assets/font/Poppins-Regular.ttf) format("opentype");
+}
+
+// ----------------------------------------------------------------------------
+
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: PoppinsRegular;
+}

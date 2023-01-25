@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<mat-grid-list cols="5" rowHeight="1:2">
+
+    <mat-grid-tile colspan="3">
+        <div class="signin-text">
+            <span class="signin-ltext">Sign in to </span>
+            <span class="signin-stext">ToDoApp is simply </span>
+
+            <div class="signin-subtext">
+                <span class="signin-regtext">If you don’t have an account register</span>
+                <span class="signin-regtext">You can <span class="signin-register">Register here !</span></span>
+
+            </div>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2" class="signin-tile">
+
+        <div class="signin-container">
+            <span class="signin-header">Sign In</span>
+
+            <form class="signin-form">
+                <mat-form-field class="signin-formfield" appearance="fill">
+                    <input matInput placeholder="Enter email">
+                </mat-form-field>
+
+                <mat-form-field class="signin-formfield" appearance="fill">
+                    <input matInput placeholder="Enter Password" type="password">
+                    <mat-icon class="signin-fpicon" matSuffix >{{true ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </mat-form-field>
+
+                <span class="signin-fpassword alignright">Forgot Password ? </span>
+
+                <button mat-raised-button class='signin-button'>Login</button>
+
+                <span class="signin-continue aligncenter">or continue with</span>
+
+                <div class="signin-social aligncenter">
+                    <img class="signin-socialbtn" src="/assets/images/fb-ico.png">
+                    <img class="signin-socialbtn" src="/assets/images/apple-ico.png">
+                    <img class="signin-socialbtn" src="/assets/images/google-ico.png">
+                </div>
+
+            </form>
+        </div>
+
+    </mat-grid-tile>
+</mat-grid-list>
