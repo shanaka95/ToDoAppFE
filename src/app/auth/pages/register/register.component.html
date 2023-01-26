@@ -1,1 +1,59 @@
-<p>register works!</p>
+<app-header></app-header>
+
+<mat-grid-list cols="5" rowHeight="1:2">
+
+    <mat-grid-tile colspan="3" *ngIf="!isMobile">
+        <div class="register-text" >
+            <span class="register-ltext">Sign up to </span>
+            <span class="register-stext">ToDoApp is simply </span>
+
+            <div class="register-subtext">
+                <span class="register-regtext">If you already have an account </span>
+                <span class="register-regtext">You can <span class="register-register">Login here !</span></span>
+            </div>
+
+            <img class="register-image" src="/assets/images/front-img2.png">
+
+
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="isMobile ? 5 : 2" class="register-tile">
+
+        <div class="register-container">
+            <span class="register-header">Sign Up</span>
+
+            <form class="register-form">
+                <mat-form-field class="register-formfield" appearance="fill">
+                    <input matInput placeholder="Enter Fullname">
+                </mat-form-field>
+
+                <mat-form-field class="register-formfield" appearance="fill">
+                    <input matInput placeholder="Enter email">
+                </mat-form-field>
+
+                <mat-form-field class="register-formfield" appearance="fill">
+                    <input matInput placeholder="Enter Password" type="password">
+                    <mat-icon class="register-picon" matSuffix >{{true ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field class="register-formfield" appearance="fill">
+                    <input matInput placeholder="Confirm Password" type="password">
+                    <mat-icon class="register-picon" matSuffix >{{true ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </mat-form-field>
+
+                <button mat-raised-button class='register-button'>Register</button>
+
+                <span class="register-continue aligncenter">or continue with</span>
+
+                <div class="register-social aligncenter">
+                    <img class="register-socialbtn" src="/assets/images/fb-ico.png">
+                    <img class="register-socialbtn" src="/assets/images/apple-ico.png">
+                    <img class="register-socialbtn" src="/assets/images/google-ico.png">
+                </div>
+
+            </form>
+        </div>
+
+    </mat-grid-tile>
+</mat-grid-list>

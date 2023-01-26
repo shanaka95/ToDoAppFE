@@ -13,3 +13,5 @@
 
 -   Login Page Created from scratch. Design highly inspired by [@LOGIFY](<https://www.figma.com/file/AMVdaBTuWnaTyTufsrfHcu/LOGIFY---WEB-LOGIN-UI-KIT-(Community)-(Community)?node-id=0%3A1&t=av6KCVZi5iMrlKv6-0>).
 -   Added responsiveness to the login page
+-   Register Page Created from scratch. Design highly inspired by [@LOGIFY](<https://www.figma.com/file/AMVdaBTuWnaTyTufsrfHcu/LOGIFY---WEB-LOGIN-UI-KIT-(Community)-(Community)?node-id=0%3A1&t=av6KCVZi5iMrlKv6-0>).
+-   Added responsiveness to the register page

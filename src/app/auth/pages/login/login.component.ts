@@ -9,6 +9,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 })
 export class LoginComponent implements OnInit {
 
+    // True if device is a mobile or tablet device
     isMobile = true;
 
     constructor(private responsive: BreakpointObserver) {
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
 
+        // Detecting screen layout changes
         this.responsive.observe([
                 Breakpoints.Web,
                 Breakpoints.WebLandscape,
@@ -29,6 +31,7 @@ export class LoginComponent implements OnInit {
 
                 this.isMobile = true;
 
+                // Check if screen layout matches with a web layout
                 if (result.matches) {
                     this.isMobile = false;
                 }
