@@ -2,8 +2,8 @@
 
 <mat-grid-list cols="5" rowHeight="1:2">
 
-    <mat-grid-tile colspan="3">
-        <div class="signin-text">
+    <mat-grid-tile colspan="3" *ngIf="!isMobile">
+        <div class="signin-text" >
             <span class="signin-ltext">Sign in to </span>
             <span class="signin-stext">ToDoApp is simply </span>
 
@@ -18,7 +18,7 @@
         </div>
     </mat-grid-tile>
 
-    <mat-grid-tile colspan="2" class="signin-tile">
+    <mat-grid-tile [colspan]="isMobile ? 5 : 2" class="signin-tile">
 
         <div class="signin-container">
             <span class="signin-header">Sign In</span>
