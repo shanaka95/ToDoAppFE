@@ -13,6 +13,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule }  from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 
+
+import { StoreModule } from '@ngrx/store';
+import { userReducer } from './state/user.reducer';
+
 @NgModule({
   declarations: [
     AuthComponent,
@@ -26,7 +30,8 @@ import {MatIconModule} from '@angular/material/icon';
     SharedModule,
     MatGridListModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    StoreModule.forFeature('user', userReducer)
   ]
 })
 export class AuthModule { }

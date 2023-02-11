@@ -2,14 +2,14 @@
 
 <mat-grid-list cols="5" rowHeight="1:2">
 
-    <mat-grid-tile colspan="3" *ngIf="!isMobile">
+    <mat-grid-tile colspan="3" *ngIf="(isMobile$ | async) === false">
         <div class="signin-text" >
             <span class="signin-ltext">Sign in to </span>
             <span class="signin-stext">ToDoApp is simply </span>
 
             <div class="signin-subtext">
                 <span class="signin-regtext">If you don't have an account</span>
-                <span class="signin-regtext">You can <span class="signin-register">Register here !</span></span>
+                <span class="signin-regtext">You can <span class="signin-register"><a class="link-formatted" [routerLink]="['/auth/register']">Register here !</a></span></span>
             </div>
 
             <img class="signin-image" src="/assets/images/man.png">
@@ -18,7 +18,7 @@
         </div>
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]="isMobile ? 5 : 2" class="signin-tile">
+    <mat-grid-tile [colspan]="(isMobile$ | async) ? 5 : 2" class="signin-tile">
 
         <div class="signin-container">
             <span class="signin-header">Sign In</span>
@@ -30,7 +30,7 @@
 
                 <mat-form-field class="signin-formfield" appearance="fill">
                     <input matInput placeholder="Enter Password" type="password">
-                    <mat-icon class="signin-picon" matSuffix >{{true ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-icon (click)="togglePassword()" class="signin-picon" matSuffix >{{(showPassword$ | async) ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </mat-form-field>
 
                 <span class="signin-fpassword alignright">Forgot Password ? </span>

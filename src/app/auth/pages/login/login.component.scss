@@ -42,6 +42,8 @@
     border-radius: 10px;
     min-height: 50px;
     margin-top: 50px;
+    cursor: pointer;
+
 }
 
 .signin-button:hover {
@@ -106,6 +108,10 @@
     margin-top: -50px;
     margin-right: 0px;
     margin-left: 300px;
+}
+
+.link-formatted {
+    text-decoration:none
 }
 
 .alignright {
